@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<style>
+    body{
+        padding: 10px;
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu with Colored Buttons</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .btn.warning, .btn-primary, .btn-success, .btn-danger, .btn.morado {
+      margin-bottom: 10px;
+      display: block;
+      text-align: left;
+    }
+    .btn.warning {
+      background-color: #ffc107;
+      color: #ffffff;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+    .btn-success {
+      background-color: #28a745;
+      color: #ffffff;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      color: #ffffff;
+    }
+    .btn.morado {
+      background-color: #f56e00;
+      color: #ffffff;
+    }
+    .btn.active {
+      border: 2px solid #000; /* Optional: add a border to indicate active state */
+    }
+    body{
+        background-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div class="nav flex-column">
+        <a class="btn warning active" aria-current="page" href="#" onclick="showContent('content1')">
+          <i class="fa-solid fa-play"></i> Español
+        </a>
+        <a class="btn btn-primary" href="#" onclick="showContent('content2')">
+          <i class="fa-solid fa-play"></i> Ciencias
+        </a>
+        <a class="btn btn-success" href="#" onclick="showContent('content3')">
+          <i class="fa-solid fa-play"></i> Matemáticas
+        </a>
+        <a class="btn btn-danger" href="#" onclick="showContent('content4')">
+          <i class="fa-solid fa-play"></i> Estudios Sociales
+        </a>
+        <a class="btn morado" href="#" onclick="showContent('content5')">
+          <i class="fa-solid fa-play"></i> Inglés
+        </a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div id="content">
+        <div id="content1" class="content-section">
+          <h1>Contenido para Español</h1>
+          <p>Este es el contenido para la sección de Español.</p>
+        </div>
+        <div id="content2" class="content-section" style="display:none;">
+          <h1>Contenido para Ciencias</h1>
+          <p>Este es el contenido para la sección de Ciencias.</p>
+        </div>
+        <div id="content3" class="content-section" style="display:none;">
+          <h1>Contenido para Matemáticas</h1>
+          <p>Este es el contenido para la sección de Matemáticas.</p>
+        </div>
+        <div id="content4" class="content-section" style="display:none;">
+          <h1>Contenido para Estudios Sociales</h1>
+          <p>Este es el contenido para la sección de Estudios Sociales.</p>
+        </div>
+        <div id="content5" class="content-section" style="display:none;">
+          <h1>Contenido para Inglés</h1>
+          <p>Este es el contenido para la sección de Inglés.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showContent(contentId) {
+  // Oculta todo el contenido
+  const contents = document.querySelectorAll('.content-section');
+  contents.forEach(content => content.style.display = 'none');
+  
+  // Muestra solo el contenido relacionado con la pestaña seleccionada
+  document.getElementById(contentId).style.display = 'block';
+  
+  // Quita la clase 'active' de todos los botones
+  const navLinks = document.querySelectorAll('.nav .btn');
+  navLinks.forEach(link => link.classList.remove('active'));
+  
+  // Agrega la clase 'active' al botón seleccionado
+  event.target.classList.add('active');
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+      
+      
+      
+</body>
+</html>
